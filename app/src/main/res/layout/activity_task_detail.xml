@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="150"
+                android:background="@color/colorComponent"
+                android:fontFamily="casual"
+                android:paddingTop="5dp"
+                android:textAlignment="center"
+                android:text="Manage Task"
+                android:textColor="@color/colorText"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/txtTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Title" />
+
+                <EditText
+                    android:id="@+id/txtDueTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Due Time (hh:mm)"
+                    android:inputType="time" />
+
+                <EditText
+                    android:id="@+id/txtDueDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Due Date (mm/dd/yy)"
+                    android:inputType="date" />
+
+                <Spinner
+                    android:id="@+id/spnPriority"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_weight="1"
+                    android:entries="@array/priorityItems"
+                    android:prompt="@color/colorComponent" />
+
+                <Spinner
+                    android:id="@+id/spnCompletion"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_weight="1"
+                    android:entries="@array/completionItems"
+                    android:prompt="@color/colorComponent" />
+
+                <EditText
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:inputType="textMultiLine"
+                    android:hint="Description" />
+
+                <Button
+                    android:id="@+id/btnSaveTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_weight="0.5"
+                    android:text="Save"
+                    android:background="@color/colorComponent"
+                    android:textColor="@color/colorText"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

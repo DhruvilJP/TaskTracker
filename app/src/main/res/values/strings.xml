@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TaskTracker</string>
+    <string name="home">HOME</string>
+    <string name="addTask">+</string>
+</resources>
